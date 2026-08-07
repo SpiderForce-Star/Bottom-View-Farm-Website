@@ -1,0 +1,37 @@
+BOTTOM VIEW FARM — DNS COPY/PASTE CHEAT SHEET
+==============================================
+Repo stays at: github.com/SpiderForce-Star/Bottom-View-Farm-Website
+Preview today: https://spiderforce-star.github.io/Bottom-View-Farm-Website/
+Domain in use now: bottomviewtn.com (currently Squarespace — will change when DNS updates)
+
+WEBSITE → GitHub Pages (GoDaddy DNS)
+------------------------------------
+Delete old A/CNAME for @ and www that point to Squarespace/parking first.
+
+TYPE   NAME   VALUE                 TTL
+A      @      185.199.108.153       600
+A      @      185.199.109.153       600
+A      @      185.199.110.153       600
+A      @      185.199.111.153       600
+
+AAAA   @      2606:50c0:8000::153   600
+AAAA   @      2606:50c0:8001::153   600
+AAAA   @      2606:50c0:8002::153   600
+AAAA   @      2606:50c0:8003::153   600
+
+CNAME  www    spiderforce-star.github.io    600
+       (no https://  no trailing slash  no folder path)
+
+CONTACT US → Gmail (GoDaddy Email Forwarding)
+---------------------------------------------
+info@bottomviewtn.com      →  bottomviewfarmtn1@gmail.com
+vendors@bottomviewtn.com   →  Carolyncook1212@gmail.com   (optional)
+
+AFTER YOU SAVE DNS
+------------------
+1) Screenshot DNS list (before + after if possible)
+2) Text/email Webb Spinner Visions: domain name + “DNS saved”
+3) We set Custom Domain in GitHub Pages + HTTPS
+4) We update site Contact Us to info@yourdomain.com
+
+THIS DOES NOT transfer the GitHub repository.
