@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Public events at Bottom View Farm — October Festival every weekend in October 2026, Apple Cider Fest weekend, and Christmas events in December. Portland, TN." />
+  <title>Events | Bottom View Farm | Portland, TN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: '#0A3D33', 'forest-light': '#0F5245', 'forest-dark': '#062820',
+            terracotta: '#C26D4F', 'terracotta-dark': '#A85A3F',
+            cream: '#F5F0E8', 'cream-dark': '#E8E0D4',
+            gold: '#D4A017', 'gold-light': '#E8B84A',
+            brown: '#5C4033', 'brown-light': '#7A5C4A', 'brown-dark': '#3D2B22',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body class="page-inner font-sans bg-cream text-brown-dark antialiased">
+
+  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8 md:py-4">
+      <a href="index.html" class="font-serif text-base font-semibold tracking-wide text-cream transition hover:text-gold md:text-xl">Bottom View Farm</a>
+      <ul class="hidden items-center gap-3 lg:flex xl:gap-5">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="weddings.html" class="nav-link">Weddings</a></li>
+        <li><a href="events.html" class="nav-link is-active">Events</a></li>
+        <li><a href="private-parties.html" class="nav-link">Private Parties</a></li>
+        <li><a href="index.html#location" class="nav-link">Visit</a></li>
+        <li><a href="https://www.facebook.com/BottomViewFarm/" target="_blank" rel="noopener noreferrer" class="nav-link nav-link--cta">Facebook</a></li>
+      </ul>
+      <button type="button" id="menu-toggle" class="flex h-10 w-10 items-center justify-center rounded-full border border-cream/30 text-cream lg:hidden" aria-label="Open menu" aria-expanded="false">
+        <svg id="icon-open" class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="icon-close" class="hidden h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden border-t border-cream/10 bg-forest-dark/98 backdrop-blur-md lg:hidden">
+      <ul class="flex flex-col gap-1 px-5 py-4">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="index.html#gallery" class="mobile-nav-link">Gallery</a></li>
+        <li><a href="weddings.html" class="mobile-nav-link">Weddings</a></li>
+        <li><a href="events.html" class="mobile-nav-link is-active">Events</a></li>
+        <li><a href="private-parties.html" class="mobile-nav-link">Private Parties</a></li>
+        <li><a href="index.html#location" class="mobile-nav-link">Visit</a></li>
+        <li><a href="https://www.facebook.com/BottomViewFarm/" target="_blank" rel="noopener noreferrer" class="mobile-nav-link">Facebook</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <img src="./images/40.4.webp" alt="Autumn at Bottom View Farm" class="page-hero__bg" fetchpriority="high" />
+      <div class="page-hero__overlay"></div>
+      <div class="relative z-10 mx-auto max-w-4xl px-5 text-center">
+        <p class="section-eyebrow section-eyebrow--light">Public Calendar 2026</p>
+        <h1 class="mt-3 font-serif text-3xl font-medium leading-snug text-cream sm:text-4xl md:text-5xl">Events at Bottom View Farm</h1>
+        <p class="mt-4 font-serif text-lg italic text-gold-light sm:text-xl">October Festival weekends · Cider Fest · Christmas</p>
+        <p class="mx-auto mt-5 max-w-2xl text-sm text-cream/80 md:text-base">
+          Open farm events for the whole community. Hosting a private celebration?
+          <a href="private-parties.html" class="font-semibold text-gold underline decoration-gold/40 underline-offset-2 hover:text-gold-light">See Private Parties</a>.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <a href="#october" class="btn-primary">October Schedule</a>
+          <a href="#christmas" class="btn-secondary btn-secondary--light">Christmas Events</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="social-proof">
+      <span class="social-proof__item"><strong>Every weekend</strong> in October 2026</span>
+      <span class="social-proof__item"><strong>Cider Fest</strong> Oct 17–18</span>
+      <span class="social-proof__item"><strong>Christmas</strong> events in December</span>
+      <span class="social-proof__item"><a href="https://www.facebook.com/BottomViewFarm/" target="_blank" rel="noopener noreferrer">Live updates on Facebook</a></span>
+    </div>
+
+    <!-- OCTOBER FESTIVAL -->
+    <section id="october" class="bg-cream py-16 md:py-24">
+      <div class="mx-auto max-w-7xl px-5 md:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="section-eyebrow">Fall on the Farm</p>
+          <h2 class="section-title">October Festival 2026</h2>
+          <div class="gold-rule mx-auto"></div>
+          <p class="mt-5 text-brown-light">
+            Join us <strong class="text-forest">every weekend in October</strong> for classic farm festival fun —
+            hayrides, pumpkin moments, family activities, food, and autumn views across the property.
+            Hours and day-of details post first on Facebook.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="event-card">
+            <div class="event-card__media">
+              <img src="./images/18.1.jpg" alt="October Festival weekend" loading="lazy" />
+              <span class="event-card__badge event-card__badge--upcoming">Weekend 1</span>
+            </div>
+            <div class="event-card__body">
+              <p class="event-card__date">October 3–4, 2026</p>
+              <h3 class="event-card__title">October Festival</h3>
+              <p class="event-card__text">Kick off fall on the farm — hayrides, family activities, and seasonal fun.</p>
+              <div class="event-card__meta">
+                <span class="event-chip">Hayrides</span>
+                <span class="event-chip">Family Fun</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="event-card">
+            <div class="event-card__media">
+              <img src="./images/18.2.jpg" alt="October Festival weekend two" loading="lazy" />
+              <span class="event-card__badge event-card__badge--upcoming">Weekend 2</span>
+            </div>
+            <div class="event-card__body">
+              <p class="event-card__date">October 10–11, 2026</p>
+              <h3 class="event-card__title">October Festival</h3>
+              <p class="event-card__text">Another full weekend of farm festival energy under October skies.</p>
+              <div class="event-card__meta">
+                <span class="event-chip">Pumpkins</span>
+                <span class="event-chip">Activities</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="event-card" id="cider-weekend">
+            <div class="event-card__media">
+              <img src="./images/40.4.webp" alt="Apple Cider Festival weekend" loading="lazy" />
+              <span class="event-card__badge event-card__badge--upcoming">Cider Fest</span>
+            </div>
+            <div class="event-card__body">
+              <p class="event-card__date">October 17–18, 2026</p>
+              <h3 class="event-card__title">Apple Cider Festival Weekend</h3>
+              <p class="event-card__text">Our flagship fall weekend — cider, vendors, hayrides, pumpkin fun & more. Vendors welcome!</p>
+              <div class="event-card__meta">
+                <span class="event-chip">Cider</span>
+                <span class="event-chip">Vendors</span>
+                <span class="event-chip">Shopping</span>
+              </div>
+              <a href="apple-cider-festival.html" class="mt-4 inline-block text-sm font-semibold text-terracotta hover:text-forest">Full Cider Fest details →</a>
+            </div>
+          </article>
+
+          <article class="event-card">
+            <div class="event-card__media">
+              <img src="./images/18.5.jpg" alt="October Festival weekend four" loading="lazy" />
+              <span class="event-card__badge event-card__badge--upcoming">Weekend 4</span>
+            </div>
+            <div class="event-card__body">
+              <p class="event-card__date">October 24–25, 2026</p>
+              <h3 class="event-card__title">October Festival</h3>
+              <p class="event-card__text">Late-October magic — cool air, golden fields, and weekend fun for all ages.</p>
+              <div class="event-card__meta">
+                <span class="event-chip">Fall Fun</span>
+                <span class="event-chip">Food</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="event-card sm:col-span-2 lg:col-span-1">
+            <div class="event-card__media">
+              <img src="./images/20.3.jpg" alt="Halloween weekend on the farm" loading="lazy" />
+              <span class="event-card__badge event-card__badge--upcoming">Weekend 5</span>
+            </div>
+            <div class="event-card__body">
+              <p class="event-card__date">October 31 – November 1, 2026</p>
+              <h3 class="event-card__title">October Festival · Halloween Weekend</h3>
+              <p class="event-card__text">Close out the season with a festive Halloween weekend on the farm.</p>
+              <div class="event-card__meta">
+                <span class="event-chip">Halloween</span>
+                <span class="event-chip">Family</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="mt-12 rounded-sm border border-terracotta/20 bg-white px-6 py-8 text-center shadow-sm md:px-10">
+          <h3 class="font-serif text-2xl text-forest">What to expect each October weekend</h3>
+          <ul class="mx-auto mt-6 grid max-w-3xl gap-3 text-left sm:grid-cols-2">
+            <li class="flex gap-2 text-sm text-brown-light"><span class="text-terracotta font-bold">·</span> Hayrides & classic farm rides</li>
+            <li class="flex gap-2 text-sm text-brown-light"><span class="text-terracotta font-bold">·</span> Pumpkin fun & photo moments</li>
+            <li class="flex gap-2 text-sm text-brown-light"><span class="text-terracotta font-bold">·</span> Family activities for kids & grown-ups</li>
+            <li class="flex gap-2 text-sm text-brown-light"><span class="text-terracotta font-bold">·</span> Food, treats & seasonal flavors</li>
+            <li class="flex gap-2 text-sm text-brown-light"><span class="text-terracotta font-bold">·</span> Scenic grounds & golden-hour views</li>
+            <li class="flex gap-2 text-sm text-brown-light"><span class="text-terracotta font-bold">·</span> Community gathering on the land</li>
+          </ul>
+          <p class="mt-6 text-sm text-brown-light">
+            Exact hours and attractions can update — follow
+            <a href="https://www.facebook.com/BottomViewFarm/" target="_blank" rel="noopener noreferrer" class="font-semibold text-terracotta hover:text-forest">Facebook</a>
+            for the latest.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CIDER FEST FEATURED -->
+    <section id="cider" class="bg-forest-dark py-16 md:py-20">
+      <div class="mx-auto max-w-7xl px-5 md:px-8">
+        <div class="event-featured">
+          <div class="event-featured__media">
+            <img src="./images/15.1.jpg" alt="Apple Cider Festival" />
+          </div>
+          <div class="event-featured__body">
+            <span class="event-card__badge event-card__badge--upcoming" style="position:static;display:inline-block;width:fit-content;">Flagship Weekend</span>
+            <p class="mt-4 text-xs font-semibold uppercase tracking-[0.2em] text-gold">October 17–18, 2026</p>
+            <h3 class="mt-2 font-serif text-3xl text-cream sm:text-4xl">Apple Cider Festival</h3>
+            <p class="mt-4 text-sm leading-relaxed text-cream/80 md:text-base">
+              Fresh cider, hayrides, pumpkin fun, food vendors, handmade crafts, and shopping —
+              our biggest fall celebration weekend. Vendors: contact Carolyn Cook to register.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="apple-cider-festival.html" class="btn-primary">Cider Fest Page</a>
+              <a href="mailto:Carolyncook1212@gmail.com?subject=Apple%20Cider%20Festival%202026%20Vendor%20Registration" class="btn-secondary btn-secondary--light">Vendor Inquiry</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHRISTMAS -->
+    <section id="christmas" class="bg-cream py-16 md:py-24">
+      <div class="mx-auto max-w-7xl px-5 md:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="section-eyebrow">December Magic</p>
+          <h2 class="section-title">Christmas Events 2026</h2>
+          <div class="gold-rule mx-auto"></div>
+          <p class="mt-5 text-brown-light">
+            After the leaves fall, the farm glows for the holidays. Join us for Christmas events in December —
+            lights, gatherings, and warm Southern hospitality. Specific dates and times will be announced on Facebook as the season approaches.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-2">
+          <article class="event-card">
+            <div class="event-card__media">
+              <img src="./images/20.1.jpg" alt="Christmas atmosphere on the farm" loading="lazy" />
+              <span class="event-card__badge">December</span>
+            </div>
+            <div class="event-card__body">
+              <p class="event-card__date">December 2026 · Dates TBA</p>
+              <h3 class="event-card__title">Christmas on the Farm</h3>
+              <p class="event-card__text">
+                Seasonal open events celebrating the holidays on the land — family-friendly evenings and festive farm charm.
+                Watch Facebook for the December schedule.
+              </p>
+              <div class="event-card__meta">
+                <span class="event-chip">Holiday</span>
+                <span class="event-chip">Family</span>
+                <span class="event-chip">Lights & Cheer</span>
+              </div>
+            </div>
+          </article>
+          <article class="event-card">
+            <div class="event-card__media">
+              <img src="./images/20.8.jpg" alt="Evening glow at Bottom View Farm" loading="lazy" />
+              <span class="event-card__badge">Private option</span>
+            </div>
+            <div class="event-card__body">
+              <p class="event-card__date">December bookings open</p>
+              <h3 class="event-card__title">Private Holiday Parties</h3>
+              <p class="event-card__text">
+                Company Christmas parties, family gatherings, and holiday celebrations can be reserved as private events —
+                with catering and music available.
+              </p>
+              <a href="private-parties.html" class="mt-4 inline-block text-sm font-semibold text-terracotta hover:text-forest">Plan a private holiday party →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHOTO STRIP -->
+    <section id="photos" class="bg-forest-dark py-16 md:py-20">
+      <div class="mx-auto max-w-7xl px-5 md:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="section-eyebrow section-eyebrow--light">Festival Memories</p>
+          <h2 class="section-title text-cream">From Past Event Days</h2>
+          <div class="gold-rule mx-auto"></div>
+        </div>
+        <div class="photo-story mt-12">
+          <a href="./images/18.1.jpg" class="event-gallery"><img src="./images/18.1.jpg" alt="Festival activities" loading="lazy" /></a>
+          <a href="./images/18.3.jpg" class="event-gallery"><img src="./images/18.3.jpg" alt="Community on the farm" loading="lazy" /></a>
+          <a href="./images/18.5.jpg" class="event-gallery"><img src="./images/18.5.jpg" alt="Outdoor festival energy" loading="lazy" /></a>
+          <a href="./images/15.3.jpg" class="event-gallery"><img src="./images/15.3.jpg" alt="Seasonal flavors" loading="lazy" /></a>
+          <a href="./images/30.1.jpg" class="event-gallery"><img src="./images/30.1.jpg" alt="Food and gathering" loading="lazy" /></a>
+          <a href="./images/30.7.jpg" class="event-gallery"><img src="./images/30.7.jpg" alt="Vendors and market" loading="lazy" /></a>
+          <a href="./images/40.2.jpg" class="event-gallery"><img src="./images/40.2.jpg" alt="Fall farm views" loading="lazy" /></a>
+          <a href="./images/BD5.jpg" class="event-gallery"><img src="./images/BD5.jpg" alt="Guests celebrating" loading="lazy" /></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-cream-dark/40 py-16 md:py-20">
+      <div class="mx-auto max-w-4xl px-5 md:px-8">
+        <div class="fb-follow-panel">
+          <p class="text-xs font-bold uppercase tracking-[0.28em] text-gold">Stay Updated</p>
+          <h3 class="mt-3">Event hours & weather updates live on Facebook</h3>
+          <p>Bottom View Farm posts festival hours, special announcements, and day-of photos on Facebook first.</p>
+          <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <a href="https://www.facebook.com/BottomViewFarm/" target="_blank" rel="noopener noreferrer" class="btn-primary">Follow on Facebook</a>
+            <a href="private-parties.html" class="btn-secondary btn-secondary--light">Private Parties</a>
+            <a href="tel:+16153257017" class="btn-secondary btn-secondary--light">(615) 325-7017</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-forest/20 bg-forest-dark text-cream/80">
+    <div class="mx-auto max-w-7xl px-5 py-14 md:px-8">
+      <div class="flex flex-col gap-10 md:flex-row md:items-start md:justify-between md:gap-8">
+        <div class="footer-contact text-center md:text-left">
+          <h3 class="font-serif text-xl text-cream">Bottom View Farm</h3>
+          <p class="mt-2 max-w-xs text-sm text-cream/65">Family-owned destination for weddings, festivals, reunions & special events in Portland, TN.</p>
+          <address class="mt-3 not-italic text-sm leading-relaxed text-cream/70">
+            185 Wilkerson Ln, Portland, TN 37148<br />
+            <a href="tel:+16153257017" class="transition hover:text-gold">(615) 325-7017</a><br />
+            <a href="mailto:bottomviewfarmtn1@gmail.com" class="transition hover:text-gold">bottomviewfarmtn1@gmail.com</a>
+          </address>
+          <div class="social-row justify-center md:justify-start">
+            <a href="https://www.facebook.com/BottomViewFarm/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" role="img"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953h-1.513c-1.491 0-1.956.928-1.956 1.88v2.257h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+              Facebook
+            </a>
+            <a href="https://www.instagram.com/BottomViewfarmstn/" target="_blank" rel="noopener noreferrer" class="social-btn social-btn--ig" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              Instagram
+            </a>
+          </div>
+        </div>
+        <div class="text-center md:text-left">
+                    <h4 class="text-xs font-semibold uppercase tracking-[0.2em] text-gold">Explore</h4>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li><a href="index.html" class="transition hover:text-gold">Home</a></li>
+            <li><a href="weddings.html" class="transition hover:text-gold">Weddings</a></li>
+            <li><a href="events.html" class="transition hover:text-gold">Events</a></li>
+            <li><a href="private-parties.html" class="transition hover:text-gold">Private Parties</a></li>
+            <li><a href="apple-cider-festival.html" class="transition hover:text-gold">Cider Festival</a></li>
+            <li><a href="index.html#location" class="transition hover:text-gold">Visit</a></li>
+          </ul>
+        </div>
+        <div class="flex justify-center md:justify-end">
+          <a href="https://webbspinnervisions.net/" target="_blank" rel="noopener noreferrer" class="footer-credit group inline-flex items-center gap-3 rounded-sm border border-cream/10 bg-forest/40 px-4 py-3 transition hover:border-gold/40 hover:bg-forest-light/30">
+            <img src="./images/logos/Shield.jpg" alt="Webb Spinner Visions" class="h-12 w-12 object-contain transition group-hover:scale-105" loading="lazy" />
+            <span class="text-left text-sm leading-snug">
+              <span class="block text-xs uppercase tracking-[0.15em] text-cream/50">Created by</span>
+              <span class="font-serif text-base text-cream transition group-hover:text-gold">Webb Spinner Visions</span>
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="mt-12 border-t border-cream/10 pt-8 text-center text-xs text-cream/50">
+        <p>&copy; <span id="year"></span> Bottom View Farm. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>

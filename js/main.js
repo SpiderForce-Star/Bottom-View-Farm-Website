@@ -120,5 +120,16 @@
         overlayOpacity: 0.92,
       });
     }
+
+    if (document.querySelector('a.event-gallery')) {
+      window.eventLightbox = new SimpleLightbox('a.event-gallery', {
+        captionsData: 'alt',
+        captionDelay: 200,
+        animationSpeed: 250,
+        fadeSpeed: 250,
+        scrollZoom: false,
+        overlayOpacity: 0.92,
+      });
+    }
   }
 })();
