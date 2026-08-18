@@ -143,4 +143,27 @@
       });
     }
   }
+
+  // Private event form success banner (?sent=1)
+  (function showFormSuccess() {
+    try {
+      var params = new URLSearchParams(window.location.search);
+      if (params.get('sent') === '1') {
+        var banner = document.getElementById('form-success');
+        var form = document.getElementById('booking-form');
+        if (banner) {
+          banner.classList.remove('hidden');
+          banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        if (form) {
+          form.classList.add('hidden');
+        }
+        // Clean the query string so refresh doesn't re-show forever
+        if (window.history && window.history.replaceState) {
+          var cleanUrl = window.location.pathname + window.location.hash;
+          window.history.replaceState({}, document.title, cleanUrl);
+        }
+      }
+    } catch (e) { /* ignore */ }
+  })();
 })();
