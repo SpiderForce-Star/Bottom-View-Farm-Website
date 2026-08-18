@@ -70,9 +70,11 @@ body {
 }
 
 .festival-marquee__sep {
-  color: rgba(212, 160, 23, 0.85);
+  color: #f5f0e8;
+  opacity: 0.95;
   padding: 0 0.15rem;
   user-select: none;
+  font-weight: 700;
 }
 
 @keyframes marqueeScroll {
