@@ -1217,7 +1217,7 @@ body {
   }
 }
 
-/* ===== Viewport: phone vs full monitor ===== */
+/* ===== Viewport polish: phone / tablet / laptop / desktop ===== */
 @media (max-width: 767px) {
   .hero-section {
     min-height: 100svh;
@@ -1245,6 +1245,36 @@ body {
     min-height: 44px;
     padding-left: 1.15rem;
     padding-right: 1.15rem;
+  }
+
+  .venue-card__img,
+  .event-card__media img {
+    max-height: 14rem;
+  }
+}
+
+/* iPad / bubble / small laptop */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-content {
+    max-width: 40rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .gallery-masonry {
+    column-count: 2;
+  }
+
+  .section-title {
+    font-size: clamp(1.75rem, 3.5vw, 2.35rem);
+  }
+}
+
+/* Laptop */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .hero-logo-wrap {
+    width: 12.5rem;
+    height: 12.5rem;
   }
 }
 
