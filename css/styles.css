@@ -5,10 +5,104 @@
 
 html {
   scroll-behavior: smooth;
+  --marquee-h: 2.5rem;
 }
 
 body {
   overflow-x: hidden;
+}
+
+/* ----- Top scrolling Fall Festival marquee ----- */
+.festival-marquee {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  height: var(--marquee-h);
+  overflow: hidden;
+  background: linear-gradient(90deg, #062820 0%, #0a3d33 40%, #8b3a1f 100%);
+  border-bottom: 2px solid #d4a017;
+  color: #f5f0e8;
+  display: flex;
+  align-items: center;
+}
+
+.festival-marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 42s linear infinite;
+  will-change: transform;
+}
+
+.festival-marquee__track:hover {
+  animation-play-state: paused;
+}
+
+.festival-marquee__group {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0;
+  padding-right: 0;
+  white-space: nowrap;
+  font-size: clamp(0.7rem, 1.8vw, 0.85rem);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.festival-marquee__item {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 0.85rem;
+}
+
+.festival-marquee__item--tagline {
+  color: #e8b84a;
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: none;
+}
+
+.festival-marquee__sep {
+  color: rgba(212, 160, 23, 0.85);
+  padding: 0 0.15rem;
+  user-select: none;
+}
+
+@keyframes marqueeScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .festival-marquee__track {
+    animation: none;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .festival-marquee__group:last-child {
+    display: none;
+  }
+}
+
+/* Header sits below fixed marquee */
+#site-header {
+  top: var(--marquee-h);
+}
+
+.page-hero,
+.hero-section {
+  scroll-margin-top: calc(var(--marquee-h) + 4rem);
 }
 
 /* ----- Fall announcement ribbon (below hero on home) ----- */
@@ -82,6 +176,7 @@ body {
 /* ----- Sticky header ----- */
 #site-header {
   background: transparent;
+  /* top offset set above with --marquee-h */
 }
 
 #site-header.is-solid,
@@ -137,8 +232,8 @@ body {
 
 /* ----- Hero ----- */
 .hero-section {
-  /* Room for fixed nav so logo is not clipped at top */
-  padding-top: 5.5rem;
+  /* Room for fixed marquee + nav so logo is not clipped at top */
+  padding-top: calc(var(--marquee-h) + 5.5rem);
   padding-bottom: 2.5rem;
   box-sizing: border-box;
 }
@@ -152,7 +247,7 @@ body {
 
 @media (min-width: 768px) {
   .hero-section {
-    padding-top: 6rem;
+    padding-top: calc(var(--marquee-h) + 6rem);
   }
 
   .hero-content {
@@ -359,7 +454,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: 7rem 1.25rem 4rem;
+  padding: calc(var(--marquee-h) + 6.5rem) 1.25rem 4rem;
 }
 
 .page-hero__bg {

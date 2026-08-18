@@ -12,9 +12,16 @@
   }
 
   var header = document.getElementById('site-header');
+  var marquee = document.querySelector('.festival-marquee');
   var ribbon = document.querySelector('.announcement-ribbon');
   var isInnerPage = document.body.classList.contains('page-inner');
   var scrollThreshold = 40;
+
+  function syncMarqueeOffset() {
+    if (!marquee) return;
+    var h = marquee.offsetHeight || 40;
+    document.documentElement.style.setProperty('--marquee-h', h + 'px');
+  }
 
   function syncRibbonOffset() {
     if (!ribbon || !document.body.classList.contains('has-ribbon')) return;
@@ -32,7 +39,11 @@
   }
 
   window.addEventListener('scroll', updateHeader, { passive: true });
-  window.addEventListener('resize', syncRibbonOffset, { passive: true });
+  window.addEventListener('resize', function () {
+    syncMarqueeOffset();
+    syncRibbonOffset();
+  }, { passive: true });
+  syncMarqueeOffset();
   syncRibbonOffset();
   updateHeader();
 
