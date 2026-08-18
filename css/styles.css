@@ -316,7 +316,8 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: contain;
+  background: #f5f0e8;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
   animation: logoSpinOnce 2.6s cubic-bezier(0.22, 0.61, 0.36, 1) 1 both;
 }
@@ -1142,4 +1143,28 @@ body {
   left: 0.15rem;
   color: #c26d4f;
   font-weight: 700;
+}
+
+/* Nav brand lockup with circular farm seal */
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.brand-lockup__mark {
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 50%;
+  object-fit: contain;
+  background: #f5f0e8;
+  box-shadow: 0 0 0 2px rgba(212, 160, 23, 0.45);
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .brand-lockup__mark {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
 }
