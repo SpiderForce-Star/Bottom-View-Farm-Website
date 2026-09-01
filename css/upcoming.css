@@ -1,6 +1,7 @@
-/* ----- Hero wedding photo crop -----
+/* ----- Hero wedding photo crop ----- */
 .hero-photo {
-  object-position: center 38%;
+  object-fit: cover;
+  object-position: center 42%;
 }
 
 /* ----- Upcoming events spotlight ----- */

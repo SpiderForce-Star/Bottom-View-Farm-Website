@@ -165,7 +165,4 @@
     } catch (e) { /* ignore */ }
   })();
 
-  var fallScript = document.createElement('script');
-  fallScript.src = './js/fall-2026.js';
-  document.body.appendChild(fallScript);
 })();
