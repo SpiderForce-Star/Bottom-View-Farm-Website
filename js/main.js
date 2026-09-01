@@ -144,7 +144,6 @@
     }
   }
 
-  // Private event form success banner (?sent=1)
   (function showFormSuccess() {
     try {
       var params = new URLSearchParams(window.location.search);
@@ -158,7 +157,6 @@
         if (form) {
           form.classList.add('hidden');
         }
-        // Clean the query string so refresh doesn't re-show forever
         if (window.history && window.history.replaceState) {
           var cleanUrl = window.location.pathname + window.location.hash;
           window.history.replaceState({}, document.title, cleanUrl);
@@ -166,4 +164,8 @@
       }
     } catch (e) { /* ignore */ }
   })();
+
+  var fallScript = document.createElement('script');
+  fallScript.src = './js/fall-2026.js';
+  document.body.appendChild(fallScript);
 })();
