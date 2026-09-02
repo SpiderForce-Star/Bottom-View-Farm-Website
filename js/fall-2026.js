@@ -5,7 +5,7 @@
   'use strict';
 
   function injectStyles() {
-    var href = './css/upcoming.css?v=20260902e';
+    var href = './css/upcoming.css?v=20260902f';
     var existing = document.querySelector('link[href*="upcoming.css"]');
     if (existing) {
       existing.href = href;
@@ -26,6 +26,23 @@
         'font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;' +
         'box-shadow:0 8px 20px rgba(0,0,0,.18);pointer-events:none}';
       document.head.appendChild(style);
+    }
+
+    if (!document.getElementById('hero-crop-inline')) {
+      var hero = document.createElement('style');
+      hero.id = 'hero-crop-inline';
+      hero.textContent =
+        '.hero-section{align-items:flex-end!important}' +
+        '.hero-section>img,.hero-section img.hero-photo,.hero-photo{' +
+        'object-fit:cover!important;object-position:58% 60%!important}' +
+        '@media (max-width:1023px){.hero-section>img,.hero-section img.hero-photo,.hero-photo{' +
+        'object-position:58% 72%!important}' +
+        '.hero-logo-wrap{width:5.35rem!important;height:5.35rem!important;margin-bottom:.35rem}' +
+        '.hero-content .mt-10{margin-top:1.1rem}}' +
+        '@media (max-width:430px){.hero-section>img,.hero-section img.hero-photo,.hero-photo{' +
+        'object-position:60% 74%!important}' +
+        '.hero-logo-wrap{width:5.15rem!important;height:5.15rem!important}}';
+      document.head.appendChild(hero);
     }
   }
 
@@ -55,7 +72,7 @@
     var copy = section.querySelector('p.mt-6');
     if (copy) {
       copy.innerHTML =
-        'The <strong class="text-forest">Inside Scoop Deli &amp; General Store</strong> ' +
+        'The <strong class="text-forest">Inside Scoop Deli & General Store</strong> ' +
         'is on its way. Farm-fresh bites, cold drinks, and general-store favorites will be here ' +
         'for festival days, wedding tours, and everyday visits. Follow us on Facebook for opening day.';
     }
