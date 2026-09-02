@@ -1,12 +1,42 @@
 /* ----- Hero wedding photo crop ----- */
+/* Couple sits just above the circular farm seal. Seal sits on the dress. */
+.hero-section {
+  align-items: flex-end !important;
+  padding-bottom: calc(2.25rem + env(safe-area-inset-bottom, 0px));
+}
+
+.hero-content {
+  margin-top: 0;
+}
+
 .hero-photo {
   object-fit: cover;
-  object-position: center 34%;
+  object-position: center 58%;
 }
 
 @media (max-width: 767px) {
   .hero-photo {
-    object-position: center 40%;
+    object-position: center 52%;
+  }
+}
+
+.hero-logo-wrap {
+  width: 6.75rem !important;
+  height: 6.75rem !important;
+  margin-bottom: 0.7rem;
+}
+
+@media (min-width: 768px) {
+  .hero-logo-wrap {
+    width: 7.5rem !important;
+    height: 7.5rem !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-logo-wrap {
+    width: 8rem !important;
+    height: 8rem !important;
   }
 }
 
