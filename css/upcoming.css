@@ -9,14 +9,18 @@
   margin-top: 0;
 }
 
+.hero-section > img,
+.hero-section img.hero-photo,
 .hero-photo {
   object-fit: cover;
-  object-position: center 58%;
+  object-position: 58% 60% !important;
 }
 
 @media (max-width: 767px) {
+  .hero-section > img,
+  .hero-section img.hero-photo,
   .hero-photo {
-    object-position: center 52%;
+    object-position: 55% 52% !important;
   }
 }
 
@@ -299,4 +303,27 @@
   .spotlight-card:hover .spotlight-card__media img {
     transform: none;
   }
+}
+
+/* ----- Inside Scoop coming soon ----- */
+.coming-soon-media {
+  position: relative;
+  display: block;
+}
+
+.coming-soon-badge {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.9rem;
+  z-index: 2;
+  padding: 0.4rem 0.85rem;
+  border-radius: 9999px;
+  background: #d4a017;
+  color: #062820;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  pointer-events: none;
 }

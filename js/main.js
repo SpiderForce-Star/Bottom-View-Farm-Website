@@ -169,7 +169,7 @@
 
 (function loadFall2026() {
   var s = document.createElement('script');
-  s.src = './js/fall-2026.js?v=20260902a';
+  s.src = './js/fall-2026.js?v=20260902e';
   s.defer = true;
   document.body.appendChild(s);
 })();
