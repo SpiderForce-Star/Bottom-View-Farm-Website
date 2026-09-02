@@ -165,4 +165,7 @@
     } catch (e) { /* ignore */ }
   })();
 
+  var fallScript = document.createElement('script');
+  fallScript.src = './js/fall-2026.js?v=20260901c';
+  document.body.appendChild(fallScript);
 })();
