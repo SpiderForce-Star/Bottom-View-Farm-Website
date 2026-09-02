@@ -1,7 +1,13 @@
 /* ----- Hero wedding photo crop ----- */
 .hero-photo {
   object-fit: cover;
-  object-position: center 42%;
+  object-position: center 34%;
+}
+
+@media (max-width: 767px) {
+  .hero-photo {
+    object-position: center 40%;
+  }
 }
 
 /* ----- Upcoming events spotlight ----- */
@@ -107,7 +113,7 @@
 .spotlight-card__title {
   margin-top: 0.4rem;
   font-family: "Playfair Display", Georgia, serif;
-  font-size: 1.55rem;
+  font-size: clamp(1.28rem, 3.4vw, 1.55rem);
   line-height: 1.2;
   color: #0a3d33;
 }
@@ -218,6 +224,18 @@
   border-radius: 0.3rem;
 }
 
+@media (max-width: 700px) {
+  .admission-band {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.1rem 1.15rem;
+  }
+
+  .admission-band .admission-pills {
+    width: 100%;
+  }
+}
+
 .admission-band__label {
   font-family: "Playfair Display", Georgia, serif;
   font-size: 1.25rem;
@@ -240,4 +258,15 @@
 
 .admission-band .admission-pills strong {
   color: #e8b84a;
+}
+
+@media (hover: none) {
+  .spotlight-card:hover {
+    transform: none;
+    box-shadow: 0 14px 36px rgba(61, 43, 34, 0.07);
+  }
+
+  .spotlight-card:hover .spotlight-card__media img {
+    transform: none;
+  }
 }
