@@ -55,8 +55,10 @@
   function swapHero() {
     if (!isHome()) return;
     var img = document.querySelector('.hero-section > img') ||
+              document.querySelector('.hero-section img.hero-photo') ||
               document.querySelector('.hero-section img.absolute');
     if (!img) return;
+    if ((img.getAttribute('src') || '').indexOf('WeddingPics') !== -1) return;
     img.src = './images/WeddingPics.jpg';
     img.alt = 'Bride and groom sharing a kiss at Bottom View Farm';
     img.classList.add('hero-photo');
