@@ -528,7 +528,7 @@ body {
 /* ----- Page hero (inner pages) ----- */
 .page-hero {
   position: relative;
-  min-height: 42vh;
+  min-height: 52vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -627,18 +627,14 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(6, 40, 32, 0.65) 0%, transparent 50%);
-  opacity: 0;
+  background: linear-gradient(to top, rgba(6, 40, 32, 0.72) 0%, transparent 48%);
+  opacity: 1;
   transition: opacity 0.35s ease;
   pointer-events: none;
 }
 
 .gallery-card:hover img {
   transform: scale(1.06);
-}
-
-.gallery-card:hover::after {
-  opacity: 1;
 }
 
 .gallery-card__label {
@@ -651,15 +647,31 @@ body {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #f5f0e8;
-  opacity: 0;
-  transform: translateY(6px);
+  opacity: 1;
+  transform: none;
   transition: opacity 0.35s ease, transform 0.35s ease;
   pointer-events: none;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
 }
 
-.gallery-card:hover .gallery-card__label {
-  opacity: 1;
-  transform: translateY(0);
+@media (hover: hover) and (pointer: fine) {
+  .gallery-card::after {
+    opacity: 0;
+  }
+
+  .gallery-card:hover::after {
+    opacity: 1;
+  }
+
+  .gallery-card__label {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  .gallery-card:hover .gallery-card__label {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .gallery-card.is-hidden {
@@ -752,6 +764,29 @@ body {
   font-size: 1.75rem;
   line-height: 1;
   margin-bottom: 0.75rem;
+}
+
+.cider-feature__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.85rem;
+  height: 2.85rem;
+  margin: 0 auto 0.85rem;
+  color: #c26d4f;
+  background: rgba(194, 109, 79, 0.1);
+  border: 1px solid rgba(194, 109, 79, 0.22);
+  border-radius: 9999px;
+}
+
+.cider-feature__icon svg {
+  width: 1.3rem;
+  height: 1.3rem;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .vendors-wanted {
