@@ -65,48 +65,6 @@
   }
 
   function markInsideScoopComingSoon() {
-    var section = document.getElementById('inside-scoop');
-    if (!section) return;
-
-    var eyebrow = section.querySelector('.section-eyebrow');
-    if (eyebrow) eyebrow.textContent = 'Coming Soon';
-
-    var copy = section.querySelector('p.mt-6');
-    if (copy) {
-      copy.innerHTML =
-        'The <strong class="text-forest">Inside Scoop Deli & General Store</strong> ' +
-        'is on its way. Farm-fresh bites, cold drinks, and general-store favorites will be here ' +
-        'for festival days, wedding tours, and everyday visits. Follow us on Facebook for opening day.';
-    }
-
-    var items = section.querySelectorAll('ul li');
-    if (items.length >= 4) {
-      items[3].innerHTML = '<span class="font-bold text-terracotta">·</span> Opening date announced on Facebook';
-    }
-
-    var actions = section.querySelector('.mt-8.flex');
-    if (actions) {
-      actions.innerHTML =
-        '<a href="https://www.facebook.com/BottomViewFarm/" target="_blank" rel="noopener noreferrer" class="btn-primary">Follow for Opening Day</a>' +
-        '<a href="tel:+16153257017" class="btn-secondary">(615) 325-7017</a>';
-    }
-
-    var media = section.querySelector('.order-1');
-    if (media) {
-      media.classList.add('coming-soon-media');
-      if (!media.querySelector('.coming-soon-badge')) {
-        var badge = document.createElement('span');
-        badge.className = 'coming-soon-badge';
-        badge.textContent = 'Coming Soon';
-        media.appendChild(badge);
-      }
-    }
-
-    var img = section.querySelector('img');
-    if (img) {
-      img.alt = 'The Inside Scoop Deli and General Store at Bottom View Farm — coming soon';
-    }
-
     document.querySelectorAll('a[href*="inside-scoop"]').forEach(function (a) {
       if (a.classList.contains('nav-link') || a.classList.contains('mobile-nav-link')) {
         a.setAttribute('title', 'The Inside Scoop — Coming Soon');

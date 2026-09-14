@@ -852,6 +852,56 @@ picture:has(> img.page-hero__bg) {
   stroke-linejoin: round;
 }
 
+/* ----- Inside Scoop coming-soon photo line ----- */
+.inside-scoop-soon {
+  background: linear-gradient(180deg, #f5f0e8 0%, #efe6d6 100%);
+  padding: 3.5rem 0;
+  border-top: 1px solid rgba(212, 160, 23, 0.28);
+  border-bottom: 1px solid rgba(10, 61, 51, 0.08);
+}
+
+.inside-scoop-soon__line {
+  display: grid;
+  gap: 1.75rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .inside-scoop-soon {
+    padding: 4.5rem 0;
+  }
+
+  .inside-scoop-soon__line {
+    grid-template-columns: minmax(220px, 340px) 1fr;
+    gap: 3rem;
+  }
+}
+
+.inside-scoop-soon__photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f0e8;
+  border: 1px solid rgba(92, 64, 51, 0.12);
+  border-radius: 0.2rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 12px 32px rgba(61, 43, 34, 0.08);
+}
+
+.inside-scoop-soon__photo picture,
+.inside-scoop-soon__photo img {
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.inside-scoop-soon__copy .section-title {
+  max-width: 18ch;
+}
+
 .vendors-wanted {
   background:
     linear-gradient(135deg, rgba(10, 61, 51, 0.95), rgba(139, 58, 31, 0.9)),
