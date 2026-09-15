@@ -608,6 +608,7 @@ picture:has(> img.page-hero__bg) {
 /* ----- Gallery filters ----- */
 .filter-btn {
   padding: 0.55rem 1.1rem;
+  min-height: 44px;
   font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 0.08em;
@@ -1560,4 +1561,16 @@ picture:has(> img.page-hero__bg) {
 /* Lock: never allow Tailwind top-0 to cover marquee */
 #site-header.top-0 {
   top: var(--marquee-h) !important;
+}
+
+html.menu-open,
+body.menu-open {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+#mobile-menu:not(.hidden) {
+  max-height: calc(100dvh - var(--marquee-h) - var(--header-h));
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
