@@ -44,10 +44,55 @@
     };
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.css" />
-  <link rel="stylesheet" href="./css/styles.css?v=20260914h" />
+  <link rel="stylesheet" href="./css/styles.css?v=20260914j" />
+  <link rel="preload" as="image" href="./images/1.webp" type="image/webp">
   <link rel="preload" as="image" href="./images/WeddingPics.webp" type="image/webp">
 </head>
 <body class="font-sans bg-cream text-brown-dark antialiased">
+
+  <div id="festival-sheen" class="festival-sheen" role="dialog" aria-modal="true" aria-labelledby="festival-sheen-title" aria-describedby="festival-sheen-copy">
+    <div class="festival-sheen__photos" aria-hidden="true">
+      <figure class="festival-sheen__shot">
+        <picture>
+          <source type="image/webp" srcset="./images/1.webp">
+          <img src="./images/1.jpg" alt="" width="960" height="640" decoding="async">
+        </picture>
+        <figcaption>Kids at play</figcaption>
+      </figure>
+      <figure class="festival-sheen__shot">
+        <picture>
+          <source type="image/webp" srcset="./images/30.1.webp">
+          <img src="./images/30.1.jpg" alt="" width="768" height="576" decoding="async">
+        </picture>
+        <figcaption>Hayrides</figcaption>
+      </figure>
+      <figure class="festival-sheen__shot">
+        <picture>
+          <source type="image/webp" srcset="./images/18.5.webp">
+          <img src="./images/18.5.jpg" alt="" width="1400" height="1050" decoding="async">
+        </picture>
+        <figcaption>Treat tables</figcaption>
+      </figure>
+      <figure class="festival-sheen__shot">
+        <picture>
+          <source type="image/webp" srcset="./images/18.6.webp">
+          <img src="./images/18.6.jpg" alt="" width="1400" height="1050" decoding="async">
+        </picture>
+        <figcaption>Festival sweets</figcaption>
+      </figure>
+    </div>
+    <div class="festival-sheen__veil"></div>
+    <div class="festival-sheen__shine"></div>
+    <div class="festival-sheen__content">
+      <p class="festival-sheen__kicker">This October</p>
+      <h2 id="festival-sheen-title">Fall Festival Weekends</h2>
+      <p id="festival-sheen-copy">Pumpkin patch, hayrides, and family fun. Open daily Sept 26–Oct 31, 8am–4pm.</p>
+      <p class="festival-sheen__feature">Apple Cider Festival · Oct 17–18</p>
+      <a href="apple-cider-festival.html" class="festival-sheen__cta">Festival details</a>
+    </div>
+    <button type="button" class="festival-sheen__skip" id="festival-sheen-skip">Skip intro</button>
+    <div class="festival-sheen__timer" aria-hidden="true"></div>
+  </div>
 
   <!-- Fall Festival scrolling marquee -->
   <div class="festival-marquee" role="region" aria-label="Fall Festival attractions">
@@ -531,6 +576,6 @@
     </div>
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.js"></script>
-  <script src="./js/main.js?v=20260914h"></script>
+  <script src="./js/main.js?v=20260914j"></script>
 </body>
 </html>

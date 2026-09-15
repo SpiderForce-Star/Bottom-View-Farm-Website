@@ -210,6 +210,51 @@
     } catch (e) { /* ignore */ }
   })();
 
+  (function festivalSheen() {
+    var overlay = document.getElementById('festival-sheen');
+    if (!overlay) return;
+    if (window.location.hash) {
+      overlay.parentNode.removeChild(overlay);
+      return;
+    }
+
+    var skip = document.getElementById('festival-sheen-skip');
+    var dismissed = false;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var hold = reduce ? 4000 : 6000;
+
+    document.documentElement.classList.add('sheen-lock');
+    document.body.classList.add('sheen-lock');
+
+    function dismiss() {
+      if (dismissed) return;
+      dismissed = true;
+      overlay.classList.add('is-dismissed');
+      overlay.setAttribute('aria-hidden', 'true');
+      overlay.setAttribute('inert', '');
+      document.documentElement.classList.remove('sheen-lock');
+      document.body.classList.remove('sheen-lock');
+      window.setTimeout(function () {
+        if (overlay && overlay.parentNode) overlay.parentNode.removeChild(overlay);
+      }, 450);
+    }
+
+    var timer = window.setTimeout(dismiss, hold);
+    if (skip) {
+      skip.addEventListener('click', function () {
+        window.clearTimeout(timer);
+        dismiss();
+      });
+    }
+    document.addEventListener('keydown', function onKey(e) {
+      if (e.key === 'Escape') {
+        window.clearTimeout(timer);
+        dismiss();
+        document.removeEventListener('keydown', onKey);
+      }
+    });
+  })();
+
 })();
 
 (function loadFall2026() {

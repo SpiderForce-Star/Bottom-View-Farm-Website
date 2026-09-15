@@ -1574,3 +1574,253 @@ body.menu-open {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
+
+/* ----- Homepage October festival sheen overlay ----- */
+.festival-sheen {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  background: #062820;
+  color: #f5f0e8;
+  opacity: 1;
+  visibility: visible;
+  animation: sheenAutoHide 6.45s ease forwards;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.festival-sheen.is-dismissed {
+  animation: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.festival-sheen__photos {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.festival-sheen__shot {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
+
+.festival-sheen__shot picture,
+.festival-sheen__shot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.festival-sheen__shot figcaption {
+  position: absolute;
+  left: 0.7rem;
+  bottom: 0.55rem;
+  z-index: 1;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #f5f0e8;
+  text-shadow: 0 1px 8px rgba(6, 40, 32, 0.8);
+}
+
+.festival-sheen__veil {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(6, 40, 32, 0.35) 0%, rgba(6, 40, 32, 0.28) 42%, rgba(6, 40, 32, 0.88) 100%),
+    linear-gradient(90deg, rgba(6, 40, 32, 0.18), transparent 18%, transparent 82%, rgba(6, 40, 32, 0.18));
+  pointer-events: none;
+}
+
+.festival-sheen__shine {
+  position: absolute;
+  inset: -20%;
+  pointer-events: none;
+  background: linear-gradient(
+    105deg,
+    transparent 38%,
+    rgba(255, 248, 220, 0.08) 46%,
+    rgba(232, 184, 74, 0.32) 50%,
+    rgba(255, 248, 220, 0.08) 54%,
+    transparent 62%
+  );
+  transform: translateX(-80%) skewX(-12deg);
+  animation: sheenSweep 2.4s ease-in-out 0.35s 2;
+}
+
+.festival-sheen__content {
+  position: relative;
+  z-index: 2;
+  width: min(40rem, calc(100% - 2rem));
+  margin: 0 auto 4.5rem;
+  padding: 0 0.5rem;
+  text-align: center;
+}
+
+.festival-sheen__kicker {
+  margin: 0 0 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #e8b84a;
+}
+
+.festival-sheen__content h2 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.85rem, 6vw, 3.1rem);
+  font-weight: 600;
+  line-height: 1.15;
+  color: #f5f0e8;
+}
+
+.festival-sheen__content p {
+  margin: 0.7rem auto 0;
+  max-width: 28rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: rgba(245, 240, 232, 0.88);
+}
+
+.festival-sheen__feature {
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-size: 1.15rem !important;
+  color: #e8b84a !important;
+}
+
+.festival-sheen__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  margin-top: 1.1rem;
+  padding: 0.55rem 1.35rem;
+  border-radius: 9999px;
+  background: #d4a017;
+  color: #062820;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.festival-sheen__cta:hover {
+  background: #e8b84a;
+}
+
+.festival-sheen__cta:active {
+  transform: scale(0.96);
+}
+
+.festival-sheen__skip {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  z-index: 5;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.45rem 1.05rem;
+  border: 1px solid #d4a017;
+  border-radius: 9999px;
+  background: #062820;
+  color: #f5f0e8;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.festival-sheen__skip:hover {
+  border-color: #d4a017;
+  color: #e8b84a;
+}
+
+.festival-sheen__timer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: rgba(212, 160, 23, 0.25);
+  transform-origin: left center;
+  animation: sheenTimer 6s linear forwards;
+}
+
+html.sheen-lock,
+body.sheen-lock {
+  overflow: hidden;
+}
+
+@keyframes sheenSweep {
+  0% { transform: translateX(-80%) skewX(-12deg); }
+  100% { transform: translateX(80%) skewX(-12deg); }
+}
+
+@keyframes sheenTimer {
+  from { transform: scaleX(1); }
+  to { transform: scaleX(0); }
+}
+
+@keyframes sheenAutoHide {
+  0%, 86% { opacity: 1; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+@media (min-width: 768px) {
+  .festival-sheen {
+    align-items: center;
+  }
+
+  .festival-sheen__photos {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  .festival-sheen__content {
+    margin-bottom: 0;
+    padding: 1.5rem 1.25rem;
+    background: rgba(6, 40, 32, 0.42);
+    border: 1px solid rgba(212, 160, 23, 0.28);
+    border-radius: 4px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  .festival-sheen__shot figcaption {
+    left: 1rem;
+    bottom: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .festival-sheen__shine,
+  .festival-sheen__timer {
+    animation: none;
+  }
+
+  .festival-sheen__timer {
+    transform: scaleX(0.35);
+  }
+}
+
+@media print {
+  .festival-sheen {
+    display: none !important;
+  }
+}
